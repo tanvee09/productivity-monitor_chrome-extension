@@ -1,0 +1,46 @@
+{
+    "manifest_version": 2,
+    "name": "productivity-monitor",
+    "description": "Track my time",
+    "version": "0.01",
+
+    "permissions": [
+        "tabs"
+    ],
+
+    "icons": {
+        "16": "images/clock16.png",
+        "48": "images/clock48.png",
+        "128": "images/clock128.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/lib/jquery-3.5.1.min.js"
+            ]
+        }
+    ],
+
+    "background": {
+        "scripts": [
+            "js/lib/jquery-3.5.1.min.js",
+            "js/app/background.js",
+            "js/app/common.js"
+        ],
+        "persistent": true
+    },
+
+    "browser_action": {
+        "default_popup": "views/popup.html",
+        "default_icon": {
+            "19": "images/browser-action-19.png",
+            "38": "images/browser-action-38.png"
+        }
+    },
+
+    "options_page": "views/options.html"
+}

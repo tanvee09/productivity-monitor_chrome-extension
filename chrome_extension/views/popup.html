@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="../css/minty-bootswatch.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <script src="../js/lib/angular.min.js"></script>
+    <script src="../js/lib/angular-ui-router.min.js"></script>
+    <script src="../js/app/popup.js"></script>
+    <style>
+        td { white-space: nowrap; }
+    </style>
+</head>
+
+<body ng-app="productivitymonitor">
+    <div ng-controller="PopupCtrl" class="container">
+        <div class="pt-3 row text-center">
+            <div class="col-sm-6">
+                <div id="form-container">
+                    <div class="page-header">
+                        <h3>Productivity Monitor</h3>
+                    </div>
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<p>Please Signup</p>
+
+<div class="form-group">
+    <!-- <label for="name">Login</label> -->
+    <input type="text" class="form-control" name="email" ng-model="formData.email" placeholder="Email">
+    <br/>
+    <input type="text" class="form-control" name="name" ng-model="formData.name" placeholder="Name">
+    <br/>
+    <input type="password" class="form-control" name="password" ng-model="formData.password" placeholder="Password">    
+</div>
+
+<a ng-click="signup(formData)" class="btn btn-block btn-info">Sign Up</a>
+<br/>
+<a ui-sref="login">Login</a>
