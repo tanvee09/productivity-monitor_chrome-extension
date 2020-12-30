@@ -10,10 +10,10 @@ require('dotenv').config();
 const app = express();
 
 
-// dbname = "kadt-learn";
-dbname = "kadtApp";
-url = process.env.DATA_BASE + dbname;
-// url = 'mongodb://localhost:27017/' + dbname;
+dbname = "kadt-learn";
+//dbname = "kadtApp";
+//url = process.env.DATA_BASE + dbname;
+url = 'mongodb://localhost:27017/' + dbname;
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false })
     .then(() => {
@@ -35,7 +35,7 @@ app.use('/user', user);
 
 
 
-const port = process.env.PORT || 8000;
+const port = 8000;
 
 
 app.listen(port, () => {
